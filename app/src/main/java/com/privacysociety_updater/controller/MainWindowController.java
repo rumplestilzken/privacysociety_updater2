@@ -1,6 +1,7 @@
 package com.privacysociety_updater.controller;
 
-import com.privacysociety_updater.Variants;
+import com.privacysociety_updater.data.Variants;
+import com.privacysociety_updater.flash.Flash;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +25,10 @@ public class MainWindowController implements Initializable {
     TextField updateURLTextField;
     @FXML
     ProgressBar progressBar;
+    static ProgressBar sProgressBar;
+    public static ProgressBar getsProgressBar() {
+        return sProgressBar;
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
         setupUpdateURLTextField();
@@ -32,7 +37,11 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML private void flashButtonAction(ActionEvent e) {
-        System.out.println("Action");
+        Variants.Variant variant =
+                Arrays.stream(Variants.Variant.values()).
+                filter(i -> i.toString().equals(variantComboBox.getValue().toString())).findFirst().get();
+        Flash flash = new Flash(variant);
+        boolean result = flash.flash();
     }
 
     private void setupUpdateURLTextField() {
@@ -50,7 +59,7 @@ public class MainWindowController implements Initializable {
     }
 
     private void setupProgressBar() {
-
+        sProgressBar = progressBar;
     }
 
 }

@@ -8,4 +8,6 @@ module com.privacysociety_updater {
     opens com.privacysociety_updater.controller to javafx.fxml;
     exports com.privacysociety_updater;
     exports com.privacysociety_updater.controller;
+    exports com.privacysociety_updater.data;
+    opens com.privacysociety_updater.data to javafx.fxml;
 }

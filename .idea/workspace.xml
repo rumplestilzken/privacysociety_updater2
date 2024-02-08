@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce409783-aab7-4a74-8ae2-2cbad9b02223" name="Changes" comment="Initial Working Demo">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/run.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Variants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ce409783-aab7-4a74-8ae2-2cbad9b02223" name="Changes" comment="Continued work on UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Variants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707258818281</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Continued work on UI">
+      <option name="closed" value="true" />
+      <created>1707384666318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707384666318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Working Demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Working Demo" />
+    <MESSAGE value="Continued work on UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continued work on UI" />
   </component>
 </project>

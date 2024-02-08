@@ -36,17 +36,18 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="95.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="95.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.privacysociety_updater.controller.MainWindowController">
   <children>
       <GridPane>
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="122.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="217.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="113.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.0" minWidth="10.0" prefWidth="317.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -56,10 +57,10 @@
          <children>
             <Label text="Update URL:" GridPane.halignment="CENTER" />
             <Label text="Variant" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <ProgressBar prefHeight="20.0" prefWidth="217.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="251.0" text="Flash" GridPane.rowIndex="2" />
-            <ComboBox fx:id="updateURLComboBox" editable="true" prefHeight="24.0" prefWidth="249.0" GridPane.columnIndex="1" />
-            <ComboBox prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="303.0" progress="0.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#flashButtonAction" prefHeight="24.0" prefWidth="251.0" text="Flash" GridPane.rowIndex="2" />
+            <ComboBox fx:id="variantComboBox" prefHeight="24.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField id="updateURLTextField" fx:id="updateURLTextField" prefWidth="245.0" text="https://ota.privacysociety.org/ota.json" GridPane.columnIndex="1" />
          </children>
       </GridPane>
   </children>

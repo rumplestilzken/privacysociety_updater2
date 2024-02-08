@@ -1,0 +1,56 @@
+package com.privacysociety_updater.controller;
+
+import com.privacysociety_updater.Variants;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.stream.Collectors;
+
+public class MainWindowController implements Initializable {
+    @FXML
+    ComboBox variantComboBox;
+    @FXML
+    TextField updateURLTextField;
+    @FXML
+    ProgressBar progressBar;
+
+    public void initialize(URL location, ResourceBundle resources) {
+        setupUpdateURLTextField();
+        fillVariant();
+        setupProgressBar();
+    }
+
+    @FXML private void flashButtonAction(ActionEvent e) {
+        System.out.println("Action");
+    }
+
+    private void setupUpdateURLTextField() {
+        updateURLTextField.setText("https://ota.privacysociety.org/ota.json");
+        updateURLTextField.setEditable(false);
+    }
+
+    private void fillVariant() {
+        List<String> list = new ArrayList<String>();
+        list.addAll(Arrays.stream(Variants.Variant.values()).map(Enum::toString).collect(Collectors.toList()));
+        ObservableList obList = FXCollections.observableList(list);
+        variantComboBox.getItems().clear();
+        variantComboBox.setItems(obList);
+        variantComboBox.setValue(variantComboBox.getItems().get(0));
+    }
+
+    private void setupProgressBar() {
+
+    }
+
+}

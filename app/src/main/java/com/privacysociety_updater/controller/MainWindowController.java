@@ -26,7 +26,7 @@ public class MainWindowController implements Initializable {
     @FXML
     ProgressBar progressBar;
     static ProgressBar sProgressBar;
-    public static ProgressBar getsProgressBar() {
+    public static ProgressBar getProgressBar() {
         return sProgressBar;
     }
 
@@ -40,7 +40,7 @@ public class MainWindowController implements Initializable {
         Variants.Variant variant =
                 Arrays.stream(Variants.Variant.values()).
                 filter(i -> i.toString().equals(variantComboBox.getValue().toString())).findFirst().get();
-        Flash flash = new Flash(variant);
+        Flash flash = new Flash(variant, updateURLTextField.getText());
         boolean result = flash.flash();
     }
 

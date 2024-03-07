@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce409783-aab7-4a74-8ae2-2cbad9b02223" name="Changes" comment="Continued work on UI">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/LinuxFlasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/WindowsFlasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Variants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,21 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,19 +64,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/resources/fxml" />
       <recent name="$PROJECT_DIR$/app/src/main/resources" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.run">
+    <configuration name="privacysociety_updater2:app [distTar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="distTar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.run" />
+      <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707384666318</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Continued work on UI">
+      <option name="closed" value="true" />
+      <created>1707386772957</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707386772957</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

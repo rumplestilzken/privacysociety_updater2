@@ -4,6 +4,21 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 
 public class Variants {
+    public enum OS {
+        Linux,
+        Windows
+    }
+
+    public static OS getOS(){
+        String os = System.getProperty("os.name");
+        if(os.toLowerCase().contains("windows")) {
+            return OS.Windows;
+        }
+        else {
+            return OS.Linux;
+        }
+    }
+
     public enum Variant {
         Pixel5a {
             @Override

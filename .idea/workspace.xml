@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce409783-aab7-4a74-8ae2-2cbad9b02223" name="Changes" comment="Continued work on UI">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/LinuxFlasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/WindowsFlasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/data/Variants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <task path="$PROJECT_DIR$/app">
           <activation />
         </task>
@@ -43,13 +42,6 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,27 +49,25 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2c0pVV1gR31Gx4XWpMoxdhBWz8E" />
+  <component name="ProjectId" id="2dLFWU8bj2Fzugs0AgX3w74Qcrq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/nick/dev/development/git/beast_hacker",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/resources/fxml" />
-      <recent name="$PROJECT_DIR$/app/src/main/resources" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager" selected="Application.run">
     <configuration name="privacysociety_updater2:app [distTar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -101,55 +91,63 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.run" />
-      <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
-    </list>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="privacysociety_updater2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="privacysociety_updater2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-f00315f9" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce409783-aab7-4a74-8ae2-2cbad9b02223" name="Changes" comment="" />
-      <created>1707258373890</created>
+      <changelist id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="" />
+      <created>1709779482674</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707258373890</updated>
+      <updated>1709779482674</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial Working Demo">
-      <option name="closed" value="true" />
-      <created>1707258818281</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1707258818281</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Continued work on UI">
-      <option name="closed" value="true" />
-      <created>1707384666318</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1707384666318</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Continued work on UI">
-      <option name="closed" value="true" />
-      <created>1707386772957</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1707386772957</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Working Demo" />
-    <MESSAGE value="Continued work on UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continued work on UI" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

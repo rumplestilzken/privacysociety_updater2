@@ -45,7 +45,7 @@ public class MainWindowController implements Initializable {
     }
 
     private void setupUpdateURLTextField() {
-        updateURLTextField.setText("https://ota.privacysociety.org/ota.json");
+        updateURLTextField.setText("http://20.29.42.174/ota.json");
         updateURLTextField.setEditable(false);
     }
 

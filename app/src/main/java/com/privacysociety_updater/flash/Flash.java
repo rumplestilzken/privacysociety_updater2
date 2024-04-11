@@ -1,11 +1,18 @@
 package com.privacysociety_updater.flash;
 
+import com.privacysociety_updater.Main;
 import com.privacysociety_updater.controller.MainWindowController;
 import com.privacysociety_updater.data.Variants;
 import com.privacysociety_updater.handler.FileHandler;
 import com.privacysociety_updater.handler.ZipHandler;
 
-import java.io.File;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import org.apache.commons.compress.compressors.xz.XZCompressorInputStream;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Flash {
     Variants.Variant variant = null;
@@ -60,8 +67,44 @@ public class Flash {
     }
 
     private void downloadUpdate() {
+        String here = System.getProperty("user.dir");
+        String jsonContent = FileHandler.fileToString(jsonUrl);
+
+        JSONObject jsonObject = new JSONObject(jsonContent);
+        JSONArray variants = (JSONArray) jsonObject.get("variants");
+        String variantUrl = "";
+        for(int i = 0; i < variants.length(); i++) {
+            JSONObject variantObject = (JSONObject)variants.get(i);
+            String name = variantObject.getString("name");
+            if(name.equals(lineageVariant)){
+                variantUrl = variantObject.getString("url");
+                break;
+            }
+        }
+
+        if(variantUrl.isEmpty()) {
+            //TODO: Show message
+        }
+
+        String[] split = variantUrl.split("/");
+        String fileName = split[split.length-1];
+
+        String fullPath = here + "/resources/" + fileName;
+        File file = new File(fullPath);
+        if(file.exists()) {
+            file.delete();
+        }
+
+        FileHandler.downloadOverHTTPS(variantUrl, fullPath);
+
+        MainWindowController.getProgressBar().setProgress(.30);
+
+        String extractedPath = ZipHandler.extractXZ(fullPath);
+
     }
 
-    private void flashGSI(String systemA) {
+
+
+    private void flashGSI(String partition) {
     }
 }

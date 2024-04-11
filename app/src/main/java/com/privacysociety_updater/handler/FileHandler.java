@@ -12,21 +12,6 @@ import java.nio.channels.ReadableByteChannel;
 public class FileHandler {
     public static boolean downloadOverHTTPS(String url, String downloadLocation) {
         boolean returnValue = false;
-//        try(BufferedInputStream in = new BufferedInputStream(new URL(url).openStream())) {
-//            FileOutputStream out = new FileOutputStream(downloadLocation);
-//            byte[] buffer = new byte[1024];
-//            int bytesRead;
-//            while((bytesRead = in.read(buffer, 0, 1024)) != -1) {
-//                out.write(buffer);
-//            }
-//            out.close();
-//            returnValue = true;
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException(e);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-
         try (FileOutputStream out = new FileOutputStream(downloadLocation);){
             ReadableByteChannel channel = Channels.newChannel(new URL(url).openStream());
             FileChannel fileChannel = out.getChannel();
@@ -34,7 +19,17 @@ public class FileHandler {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         return returnValue;
+    }
+
+    public static String fileToString(String url) {
+        try {
+            URL actualURL = new URL(url);
+            return new String(actualURL.openStream().readAllBytes());
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

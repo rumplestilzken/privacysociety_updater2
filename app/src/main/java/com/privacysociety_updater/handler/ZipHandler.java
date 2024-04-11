@@ -59,32 +59,5 @@ public class ZipHandler {
         return returnValue;
     }
 
-    public static String extractXZ(String path) {
-        String outputPath = path.replace(".xz", "");
-        try {
-            FileInputStream in = new FileInputStream(path);
-            BufferedInputStream bin = new BufferedInputStream(in);
-            FileOutputStream out = new FileOutputStream(outputPath);
-            XZCompressorInputStream xzin = new XZCompressorInputStream(bin);
-            final byte[] buffer = new byte[8192];
-            int readBytes = 0;
-            double counter = .30;
-            while((readBytes = xzin.read(buffer)) != -1) {
-                out.write(buffer);
-                counter += MainWindowController.getProgressBar().getProgress() + .01;
-                if(MainWindowController.getProgressBar().getProgress() >= .40) {
-                    MainWindowController.getProgressBar().setProgress(.30);
-                } else {
-                    MainWindowController.getProgressBar().setProgress(counter);
-                }
-            }
-            out.close();
-            xzin.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return outputPath;
-    }
+
 }

@@ -5,9 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.io.InputStream;
 
 public class Main extends Application {
     @Override
@@ -16,9 +19,11 @@ public class Main extends Application {
 
         setupUI(root);
 
-        Scene scene = new Scene(root, 430, 90);
+        Scene scene = new Scene(root, 430, 200);
         stage.setTitle("Privacy Society Updater");
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.getIcons().add(new Image(ClassLoader.getSystemClassLoader().getResourceAsStream("icons/icon.png")));
         stage.show();
     }
 

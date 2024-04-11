@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/FlashTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/StreamGobbler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/VersionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,19 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="rumplestilzken &lt;rumplestilzken@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -126,6 +139,15 @@
       <option name="presentableId" value="Default" />
       <updated>1709779482674</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated to download and extract xz files.">
+      <option name="closed" value="true" />
+      <created>1712794380186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712794380186</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,15 +161,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated to download and extract xz files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to download and extract xz files." />
   </component>
 </project>

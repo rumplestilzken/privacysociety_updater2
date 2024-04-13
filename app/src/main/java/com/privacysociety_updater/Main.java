@@ -8,6 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.net.URL;
+
 public class Main extends Application {
     protected static Parent rootObject = null;
     protected static Scene scene = null;
@@ -41,7 +43,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Main.stage = stage;
 
-        Parent root = FXMLLoader.load(Main.class.getClassLoader().getResource("com/privacysociety_updater/fxml/MainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/privacysociety_updater/fxml/MainWindow.fxml"));
 
         Main.rootObject = root;
 
@@ -53,7 +55,7 @@ public class Main extends Application {
         stage.setTitle("Privacy Society Updater");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.getIcons().add(new Image(ClassLoader.getSystemClassLoader().getResourceAsStream("com/privacysociety_updater/icons/icon.png")));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/privacysociety_updater/icons/icon.png")));
         stage.show();
     }
 

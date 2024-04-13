@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -62,6 +63,7 @@ public class MainWindowController implements Initializable {
     }
 
     private void hideVariantURL() {
+        //TODO: Security Lock
         updateURLTextField.setVisible(false);
         updateURLLabel.setVisible(false);
     }
@@ -82,7 +84,7 @@ public class MainWindowController implements Initializable {
             Stage dialog = new Stage();
             SaveWindowController.setModalStage(dialog);
 
-            root = FXMLLoader.load(ClassLoader.getSystemClassLoader().getResource("fxml/SaveWindow.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/com/privacysociety_updater/fxml/SaveWindow.fxml"));
 
             Scene scene = new Scene(root, 600, 106);
 
@@ -91,7 +93,7 @@ public class MainWindowController implements Initializable {
             dialog.setTitle("Flash Device Verification");
             dialog.setScene(scene);
             dialog.setResizable(false);
-            dialog.getIcons().add(new Image(ClassLoader.getSystemClassLoader().getResourceAsStream("com/privacysociety_updater/icons/icon.png")));
+            dialog.getIcons().add(new Image(getClass().getResourceAsStream("/com/privacysociety_updater/icons/icon.png")));
             dialog.showAndWait();
 
             if(SaveWindowController.getState() != SaveWindowController.State.Accepted) {

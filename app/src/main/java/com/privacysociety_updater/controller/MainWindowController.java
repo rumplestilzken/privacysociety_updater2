@@ -1,28 +1,33 @@
 package com.privacysociety_updater.controller;
 
+import com.privacysociety_updater.Main;
 import com.privacysociety_updater.data.Variants;
 import com.privacysociety_updater.flash.Flash;
 import com.privacysociety_updater.flash.FlashTask;
+import com.privacysociety_updater.handler.VariantHandler;
 import com.privacysociety_updater.handler.VersionHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 public class MainWindowController implements Initializable {
@@ -38,6 +43,10 @@ public class MainWindowController implements Initializable {
     Button flashButton;
     @FXML
     Label versionTextLabel;
+    @FXML
+    GridPane gridPane;
+    @FXML
+    Label updateURLLabel;
 
     static ProgressBar sProgressBar;
     public static ProgressBar getProgressBar() {
@@ -49,6 +58,12 @@ public class MainWindowController implements Initializable {
         setupUpdateURLTextField();
         fillVariant();
         setupProgressBar();
+        hideVariantURL();
+    }
+
+    private void hideVariantURL() {
+        updateURLTextField.setVisible(false);
+        updateURLLabel.setVisible(false);
     }
 
     private void setVersionInformation() {
@@ -56,12 +71,39 @@ public class MainWindowController implements Initializable {
     }
 
     @FXML private void flashButtonAction(ActionEvent e) {
-        variantComboBox.setDisable(true);
-        flashButton.setDisable(true);
-
+        Parent root = null;
         Variants.Variant variant =
                 Arrays.stream(Variants.Variant.values()).
                 filter(i -> i.toString().equals(variantComboBox.getValue().toString())).findFirst().get();
+
+        VariantHandler.setVariant(variant);
+
+        try {
+            Stage dialog = new Stage();
+            SaveWindowController.setModalStage(dialog);
+
+            root = FXMLLoader.load(ClassLoader.getSystemClassLoader().getResource("fxml/SaveWindow.fxml"));
+
+            Scene scene = new Scene(root, 600, 106);
+
+            dialog.initOwner(Main.getStage());
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            dialog.setTitle("Flash Device Verification");
+            dialog.setScene(scene);
+            dialog.setResizable(false);
+            dialog.getIcons().add(new Image(ClassLoader.getSystemClassLoader().getResourceAsStream("com/privacysociety_updater/icons/icon.png")));
+            dialog.showAndWait();
+
+            if(SaveWindowController.getState() != SaveWindowController.State.Accepted) {
+                return;
+            }
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+
+        variantComboBox.setDisable(true);
+        flashButton.setDisable(true);
+
         Flash flash = new Flash(variant, updateURLTextField.getText());
         FlashTask<Void>  flashTask = new FlashTask<Void>() {
             @Override

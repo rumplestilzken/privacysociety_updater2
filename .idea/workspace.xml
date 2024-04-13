@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/FlashTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/StreamGobbler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/VersionHandler.java" afterDir="false" />
+    <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="Completed update for Jelly2E">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/SaveWindowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/VariantHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/flash/Flash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/handler/ZipHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/fxml/MainWindow.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/icons/icon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +74,25 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/nick/dev/development/git/beast_hacker",
+    "last_opened_file_path": "/home/nick/dev/external_development/privacysociety/privacysociety_updater2/app/src/main/resources/com/privacysociety_updater",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.run">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater/icons" />
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater/fxml" />
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com.privacysociety_updater.icons" />
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater/" />
+      <recent name="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater/fmxl/fxml" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.privacysociety_updater2:app [fatJar]">
     <configuration name="privacysociety_updater2:app [distTar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -94,6 +105,28 @@
         <option name="taskNames">
           <list>
             <option value="distTar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="privacysociety_updater2:app [fatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="fatJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -119,6 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.privacysociety_updater2:app [fatJar]" />
         <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
       </list>
     </recent_temporary>
@@ -147,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712794380186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed update for Jelly2E">
+      <option name="closed" value="true" />
+      <created>1712846187899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712846187899</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +205,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated to download and extract xz files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated to download and extract xz files." />
+    <MESSAGE value="Completed update for Jelly2E" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed update for Jelly2E" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java</url>
+          <line>64</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

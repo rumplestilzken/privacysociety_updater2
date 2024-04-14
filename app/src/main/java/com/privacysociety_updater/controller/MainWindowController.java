@@ -22,6 +22,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -64,6 +65,11 @@ public class MainWindowController implements Initializable {
 
     private void hideVariantURL() {
         //TODO: Security Lock
+        String here = System.getProperty("user.dir");
+        if(new File(here + "/admin").exists())
+        {
+            return;
+        }
         updateURLTextField.setVisible(false);
         updateURLLabel.setVisible(false);
     }
@@ -151,7 +157,7 @@ public class MainWindowController implements Initializable {
 
     private void setupUpdateURLTextField() {
         updateURLTextField.setText("http://20.29.42.174/ota.json");
-        updateURLTextField.setEditable(false);
+//        updateURLTextField.setEditable(false);
     }
 
     private void fillVariant() {

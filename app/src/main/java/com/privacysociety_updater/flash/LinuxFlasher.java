@@ -1,5 +1,15 @@
 package com.privacysociety_updater.flash;
 
+import com.privacysociety_updater.Main;
+import com.privacysociety_updater.controller.PasswordVerificationWindowController;
+import com.privacysociety_updater.handler.ProcessHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

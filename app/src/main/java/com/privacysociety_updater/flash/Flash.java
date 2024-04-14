@@ -4,6 +4,7 @@ import com.privacysociety_updater.Main;
 import com.privacysociety_updater.controller.MainWindowController;
 import com.privacysociety_updater.data.Variants;
 import com.privacysociety_updater.handler.FileHandler;
+import com.privacysociety_updater.handler.ProcessHandler;
 import com.privacysociety_updater.handler.StreamGobbler;
 import com.privacysociety_updater.handler.ZipHandler;
 
@@ -18,6 +19,8 @@ import javafx.concurrent.Task;
 import org.apache.commons.compress.compressors.xz.XZCompressorInputStream;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import static com.privacysociety_updater.handler.ProcessHandler.processCommand;
 
 public class Flash {
     Variants.Variant variant = null;
@@ -170,16 +173,17 @@ public class Flash {
                 flasher.getPlatformToolsFilename().replace(".zip", "") +
                 "/platform-tools/";
 
+
         String output = "";
         List<String> args = new ArrayList<>();
         args.add("reboot");
-        args.add("bootloader");
-        output = processCommand(fullPath + "/adb", args);
+        args.add("fastboot");
+        output = ProcessHandler.processCommand(fullPath + "/adb", args);
         updateMessage("Waiting for device...");
 
         args.clear();
         args.add("devices");
-        output = processCommand(fullPath + "/fastboot", args);
+        output = ProcessHandler.processCommand(fullPath + "/fastboot", args);
         while(!output.toLowerCase().contains("fastboot"))
         {
             output = processCommand(fullPath + "/fastboot", args);
@@ -190,47 +194,19 @@ public class Flash {
         args.add(partition);
         args.add(imageFileName);
         updateMessage("Flashing device...");
-        output = processCommand(fullPath + "/fastboot", args);
+        output = ProcessHandler.processCommand(fullPath + "/fastboot", args);
         updateProgress(.90);
 
-        args.clear();
-        args.add("reboot");
-        output = processCommand(fullPath + "/fastboot", args);
-    }
-
-    private static String processCommand(String executablePath, List<String> args) {
-        Process p = null;
-        String fullOutput = "";
         try {
-            ProcessBuilder pb = new ProcessBuilder();
-            List<String> command = new ArrayList<>();
-            command.add(executablePath);
-            command.addAll(args);
-            pb.command(command);
-            p = pb.start();
-//            p = Runtime.getRuntime().exec(executablePath + command);
-            BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            BufferedReader err = new BufferedReader(new InputStreamReader(p.getErrorStream()));
-
-            int exitCode = p.waitFor();System.out.println("ExitCode:" + exitCode);
-
-            String output = "";
-            System.out.println("Input:");
-            while((output = in.readLine()) != null) {
-                fullOutput += output + System.lineSeparator();
-                System.out.println(output);
-            }
-
-            System.out.println("Error:");
-            while((output = err.readLine()) != null) {
-                fullOutput += output + System.lineSeparator();
-                System.out.println(output);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return fullOutput;
+
+        args.clear();
+        args.add("reboot");
+        output = ProcessHandler.processCommand(fullPath + "/fastboot", args);
     }
+
+
 }

@@ -80,6 +80,29 @@ public class MainWindowController implements Initializable {
 
     @FXML private void flashButtonAction(ActionEvent e) {
         Parent root = null;
+
+        if(Variants.getOS() == Variants.OS.Linux)
+        {
+            try {
+                Stage dialog = new Stage();
+                PasswordVerificationWindowController.setModalStage(dialog);
+
+                root = FXMLLoader.load(getClass().getResource("/com/privacysociety_updater/fxml/PasswordVerificationWindow.fxml"));
+
+                Scene scene = new Scene(root, 279, 93);
+                dialog.initOwner(Main.getStage());
+                dialog.initModality(Modality.APPLICATION_MODAL);
+                dialog.setTitle("Password Verification");
+                dialog.setScene(scene);
+                dialog.setResizable(false);
+                dialog.getIcons().add(new Image(getClass().getResourceAsStream("/com/privacysociety_updater/icons/icon.png")));
+                dialog.showAndWait();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+
+
         Variants.Variant variant =
                 Arrays.stream(Variants.Variant.values()).
                 filter(i -> i.toString().equals(variantComboBox.getValue().toString())).findFirst().get();

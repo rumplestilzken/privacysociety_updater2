@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="Fix ClassLoader issue with distribution and IDE">
+    <list default="true" id="9d795d05-73ca-447a-a968-844c8db4fe1e" name="Changes" comment="Added Security">
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/com/privacysociety_updater/fxml/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/privacysociety_updater/controller/MainWindowController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +109,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="privacysociety_updater2:app [distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="distZip" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="privacysociety_updater2:app [fatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -147,6 +169,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.privacysociety_updater2:app [distTar]" />
+        <item itemvalue="Gradle.privacysociety_updater2:app [distZip]" />
         <item itemvalue="Gradle.privacysociety_updater2:app [fatJar]" />
       </list>
     </recent_temporary>
@@ -199,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713052239059</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Security">
+      <option name="closed" value="true" />
+      <created>1713055462798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713055462798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,7 +249,8 @@
     <MESSAGE value="Completed update for Jelly2E" />
     <MESSAGE value="Confirmation for flashing device working." />
     <MESSAGE value="Fix ClassLoader issue with distribution and IDE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix ClassLoader issue with distribution and IDE" />
+    <MESSAGE value="Added Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
